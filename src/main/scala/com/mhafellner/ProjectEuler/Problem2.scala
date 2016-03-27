@@ -5,12 +5,23 @@ package com.mhafellner.ProjectEuler
   */
 object Problem2 {
   def main(args: Array[String]): Unit = {
-    val allEvenFibonaccisSum = addAllEvenFibonaccis(10)
+    val allEvenFibonaccisSum = addAllEvenFibonaccis(4000000)
     println(allEvenFibonaccisSum)
-    allEvenFibonaccisSum
   }
 
   def addAllEvenFibonaccis(limit: Int): Int = {
-    limit
+    var firstNumber = 1
+    var secondNumber = 2
+    var nextFibonacci = secondNumber
+    var sum = 0
+    do {
+      if (nextFibonacci % 2 == 0) {
+        sum += nextFibonacci
+      }
+      nextFibonacci = firstNumber + secondNumber
+      firstNumber = secondNumber
+      secondNumber = nextFibonacci
+    } while (nextFibonacci < limit)
+    sum
   }
 }

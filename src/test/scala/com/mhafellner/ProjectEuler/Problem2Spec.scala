@@ -17,7 +17,7 @@ class Problem2Spec extends FlatSpec with Matchers {
   }
 
   "addAllEvenFibonaccis" should "return the sum of all even Fibonacci terms within the given limit" in {
-    Problem2.addAllEvenFibonaccis(10) should be(10)
+    Problem2.addAllEvenFibonaccis(100) should be(44)
   }
 
 }
