@@ -20,4 +20,8 @@ class Problem2Spec extends FlatSpec with Matchers {
     Problem2.addAllEvenFibonaccis(100) should be(44)
   }
 
+  "addAllEvenFibonaccis" should "return 0 when given a negative limit" in {
+    Problem2.addAllEvenFibonaccis(-3) should be(0)
+  }
+
 }

@@ -10,6 +10,9 @@ object Problem2 {
   }
 
   def addAllEvenFibonaccis(limit: Int): Int = {
+    if (limit < 3) {
+      return 0
+    }
     var firstNumber = 1
     var secondNumber = 2
     var nextFibonacci = secondNumber
